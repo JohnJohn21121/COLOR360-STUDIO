@@ -13,8 +13,13 @@ public class User {
     @NonNull
     String name;
     @NonNull
+    String LastName;
+    @NonNull
+    String email;
+    @NonNull
     String userName;
     @NonNull
     String password;
+    String address;
 
 }
