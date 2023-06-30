@@ -1,24 +1,22 @@
 package com.johnjohn21121.COLORS360Studio.model;
 
-import com.johnjohn21121.COLORS360Studio.constants.PendonSize;
+import com.johnjohn21121.COLORS360Studio.constants.ShirtMaterial;
 import jakarta.persistence.Entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.lang.NonNull;
 
+@Entity
 @Data
 @NoArgsConstructor
-@Entity
-public class PendonRUXbanner {
+public class CustomShirt {
 
-    enum Material{
-        BANNER,
-        LONA
-    }
 
     @Id
     int id;
-    PendonSize pendonSize;
-    Material material;
+    @NonNull
+    byte[][] customDesign;
+    ShirtMaterial shirtMaterial;
 
 }
